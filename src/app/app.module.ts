@@ -5,13 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CloudTitleComponent } from './cloud-title/cloud-title.component';
 import { HomeComponent } from './home/home.component';
+import { DesignComponent } from './design/design.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CloudTitleComponent,
     CloudTitleComponent,
-    HomeComponent
+    HomeComponent,
+    DesignComponent
   ],
   imports: [
     BrowserModule,
