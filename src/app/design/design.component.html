@@ -3,3 +3,52 @@
 <p>We provide a palette of fresh ingredients...you provide the inspiration! Select the
     components that will come together as your crowning achievement of taco workmanship.</p>
 
+<form (ngSubmit)="onSubmit()">
+    <div class="ingredientsblock" style="text-align: center; width: 100%;">
+
+        <fieldset>
+            <legend>Choose your wrap</legend>
+            <span *ngFor="let wrap of wraps">
+                <input type="checkbox" (change)="updateIngredients(wrap, $event)" name="ingredients" value="{{wrap.id}}"/>{{ wrap.name }}<br/>
+            </span>
+        </fieldset>
+
+        <fieldset>
+            <legend>Choose your proteins</legend>
+            <span *ngFor="let protein of proteins">
+                <input type="checkbox" (change)="updateIngredients(protein, $event)" name="ingredients" value="{{protein.id}}"/>{{ protein.name }}<br/>
+            </span>
+        </fieldset>
+
+        <fieldset>
+            <legend>Choose your veggies</legend>
+            <span *ngFor="let veggie of veggies">
+                <input type="checkbox" (change)="updateIngredients(veggie, $event)" name="ingredients" value="{{veggie.id}}"/>{{ veggie.name }}<br/>
+            </span>
+        </fieldset>
+
+        <fieldset>
+            <legend>Choose your cheeses</legend>
+            <span *ngFor="let cheese of cheeses">
+                <input type="checkbox" (change)="updateIngredients(cheese, $event)" name="ingredients" value="{{cheese.id}}"/>{{ cheese.name }}<br/>
+            </span>
+        </fieldset>
+
+        <fieldset>
+            <legend>Choose your sauces</legend>
+            <span *ngFor="let sauce of sauces">
+                <input type="checkbox" (change)="updateIngredients(sauce, $event)" name="ingredients" value="{{sauce.id}}"/>{{ sauce.name }}<br/>
+            </span>
+        </fieldset>
+
+        <fieldset>
+            <legend>Name your taco creation</legend>
+            <input type="text" [(ngModel)]="model.name" name="name" class="nameFiled"/>
+        </fieldset>
+
+        <div style="text-align:center; width:100%;">
+            <button>Construct this taco</button>
+        </div>
+
+    </div>
+</form>

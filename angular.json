@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "tacocloud-ui"
+    }
+  },
+  "defaultProject": "tacocloud-ui",
+  "cli": {
+    "analytics": false
+  }
 }

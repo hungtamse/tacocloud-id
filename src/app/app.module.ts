@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { CloudTitleComponent } from './cloud-title/cloud-title.component';
 import { HomeComponent } from './home/home.component';
 import { DesignComponent } from './design/design.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { DesignComponent } from './design/design.component';
     CloudTitleComponent,
     CloudTitleComponent,
     HomeComponent,
-    DesignComponent
+    DesignComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
